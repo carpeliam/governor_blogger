@@ -1,6 +1,14 @@
 = governor_blogger
 
-Description goes here.
+*Governor[http://carpeliam.github.com/governor/]* (named after Rod
+Blagojevich) is the pluggable blogging platform for Rails, built for people
+who want to build their blog into their website, not build their website into
+their blog.
+
+*governor_blogger* is a plugin for Governor, allowing you to cross-post your
+articles to Blogger[http://www.blogger.com].
+
+It's not functional yet, but watch this space.
 
 == Contributing to governor_blogger
  
