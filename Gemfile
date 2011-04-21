@@ -23,5 +23,6 @@ group :development, :test do
   gem 'will_paginate', '~> 3.0.beta'
   gem 'devise'
   gem 'governor_blogger', :path => './'
+  gem 'delayed_job'
   gem 'dynamic_form'
 end
