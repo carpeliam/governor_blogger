@@ -1,6 +1,6 @@
 = governor_blogger
 
-*Governor[http://carpeliam.github.com/governor/]* (named after Rod
+<b>Governor[http://carpeliam.github.com/governor/]</b> (named after Rod
 Blagojevich) is the pluggable blogging platform for Rails, built for people
 who want to build their blog into their website, not build their website into
 their blog.
@@ -8,7 +8,34 @@ their blog.
 *governor_blogger* is a plugin for Governor, allowing you to cross-post your
 articles to Blogger[http://www.blogger.com].
 
-It's not functional yet, but watch this space.
+== Dependencies
+
+* Governor[http://carpeliam.github.com/governor/]
+* GovernorBackground[http://carpeliam.github.com/governor_background/]
+* And because of the GovernorBackground dependency, either
+  Delayed_Job[https://github.com/collectiveidea/delayed_job] or
+  Resque[https://github.com/defunkt/resque]. If you use Resque, it's highly
+  recommended that you use
+  resque-status[https://github.com/quirkey/resque-status] as well.
+
+== Setting up
+
+First, install the above dependencies. Then, in your Gemfile, add the
+following:
+
+    gem 'governor_blogger'
+
+Once you've installed the gem into your app, you need to run the generator:
+
+    rails generate governor:add_blogger [RESOURCE]
+
+This will add a migration for associating articles to blogger posts as well as
+an initializer in which you'll need to set your username and password for
+blogger. (Blogger's API also supports AuthSub authentication, which is similar
+to OAuth, but this is a bit more difficult. Please feel free to add patches
+for better authentication patterns.) Also, because a Google user can have
+multiple blogs, you also need to set your blog ID. Help for this can be found
+at http://www.google.com/support/blogger/bin/answer.py?answer=42191.
 
 == Contributing to governor_blogger
  

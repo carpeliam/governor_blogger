@@ -11,3 +11,11 @@ blogger.register_model_callback do |base|
 end
 
 Governor::PluginManager.register blogger
+
+module GovernorBlogger
+  class Configuration
+    cattr_accessor :username, :password, :blog_id
+  end
+  @@config = Configuration.new
+  mattr_reader :config
+end

@@ -18,6 +18,10 @@ module Governor
       migration_template 'migrations/add_blogger.rb', "db/migrate/governor_add_blogger.rb", :skip => true
     end
     
+    def copy_initializer
+      template 'blogger.rb', 'config/initializers/blogger.rb'
+    end
+    
     private
     def mapping
       Governor.resources[resource.pluralize.to_sym]
