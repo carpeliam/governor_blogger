@@ -11,7 +11,7 @@ articles to Blogger[http://www.blogger.com].
 == Dependencies
 
 * Governor[http://carpeliam.github.com/governor/]
-* GovernorBackground[http://carpeliam.github.com/governor_background/]
+* GovernorBackground[https://github.com/carpeliam/governor_background]
 * And because of the GovernorBackground dependency, either
   Delayed_Job[https://github.com/collectiveidea/delayed_job] or
   Resque[https://github.com/defunkt/resque]. If you use Resque, it's highly
