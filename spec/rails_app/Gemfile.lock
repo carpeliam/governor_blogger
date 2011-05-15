@@ -1,7 +1,7 @@
 PATH
   remote: ../..
   specs:
-    governor_blogger (0.1.1)
+    governor_blogger (0.1.2)
       gdata
       governor
       governor_background (>= 0.3.0)
