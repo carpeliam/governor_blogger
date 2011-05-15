@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{governor_blogger}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Liam Morley"]
-  s.date = %q{2011-04-24}
+  s.date = %q{2011-05-15}
   s.description = %q{A plugin for the Rails 3-based Governor blogging system that posts and updates articles to Blogger.com.}
   s.email = %q{liam@carpeliam.com}
   s.extra_rdoc_files = [
@@ -31,6 +31,7 @@ Gem::Specification.new do |s|
     "lib/generators/governor/templates/blogger.rb",
     "lib/generators/governor/templates/migrations/add_blogger.rb",
     "lib/governor_blogger.rb",
+    "lib/governor_blogger/blogger.rb",
     "lib/governor_blogger/instance_methods.rb",
     "lib/governor_blogger/rails.rb",
     "spec/governor_blogger_spec.rb",
@@ -141,7 +142,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<gdata>, [">= 0"])
       s.add_runtime_dependency(%q<nokogiri>, [">= 0"])
       s.add_runtime_dependency(%q<governor>, [">= 0"])
-      s.add_runtime_dependency(%q<governor_background>, [">= 0"])
+      s.add_runtime_dependency(%q<governor_background>, [">= 0.3.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_development_dependency(%q<sqlite3>, [">= 0"])
       s.add_development_dependency(%q<rspec-rails>, [">= 0"])
@@ -153,12 +154,14 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<devise>, [">= 0"])
       s.add_development_dependency(%q<governor_blogger>, [">= 0"])
       s.add_development_dependency(%q<delayed_job>, [">= 0"])
+      s.add_development_dependency(%q<resque>, [">= 0"])
+      s.add_development_dependency(%q<resque-status>, [">= 0"])
       s.add_development_dependency(%q<dynamic_form>, [">= 0"])
     else
       s.add_dependency(%q<gdata>, [">= 0"])
       s.add_dependency(%q<nokogiri>, [">= 0"])
       s.add_dependency(%q<governor>, [">= 0"])
-      s.add_dependency(%q<governor_background>, [">= 0"])
+      s.add_dependency(%q<governor_background>, [">= 0.3.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_dependency(%q<sqlite3>, [">= 0"])
       s.add_dependency(%q<rspec-rails>, [">= 0"])
@@ -170,13 +173,15 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<devise>, [">= 0"])
       s.add_dependency(%q<governor_blogger>, [">= 0"])
       s.add_dependency(%q<delayed_job>, [">= 0"])
+      s.add_dependency(%q<resque>, [">= 0"])
+      s.add_dependency(%q<resque-status>, [">= 0"])
       s.add_dependency(%q<dynamic_form>, [">= 0"])
     end
   else
     s.add_dependency(%q<gdata>, [">= 0"])
     s.add_dependency(%q<nokogiri>, [">= 0"])
     s.add_dependency(%q<governor>, [">= 0"])
-    s.add_dependency(%q<governor_background>, [">= 0"])
+    s.add_dependency(%q<governor_background>, [">= 0.3.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
     s.add_dependency(%q<sqlite3>, [">= 0"])
     s.add_dependency(%q<rspec-rails>, [">= 0"])
@@ -188,6 +193,8 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<devise>, [">= 0"])
     s.add_dependency(%q<governor_blogger>, [">= 0"])
     s.add_dependency(%q<delayed_job>, [">= 0"])
+    s.add_dependency(%q<resque>, [">= 0"])
+    s.add_dependency(%q<resque-status>, [">= 0"])
     s.add_dependency(%q<dynamic_form>, [">= 0"])
   end
 end

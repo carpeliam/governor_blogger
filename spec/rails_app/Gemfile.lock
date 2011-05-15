@@ -1,10 +1,10 @@
 PATH
   remote: ../..
   specs:
-    governor_blogger (0.1.0)
+    governor_blogger (0.1.1)
       gdata
       governor
-      governor_background
+      governor_background (>= 0.3.0)
       nokogiri
 
 GEM
