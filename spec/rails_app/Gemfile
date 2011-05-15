@@ -9,8 +9,10 @@ gem 'sqlite3'
 
 gem 'devise'
 gem 'delayed_job'
+gem 'resque'
+gem 'resque-status', :require => 'resque/status'
 gem 'governor'
-gem 'governor_background'
+gem 'governor_background', '>= 0.3.0'
 gem 'governor_blogger', :path => '../..'
 
 gem 'dynamic_form'

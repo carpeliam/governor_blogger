@@ -32,7 +32,7 @@ module GovernorBlogger
     end
   
     def post_to_blogger_in_background
-      run_in_background :post_to_blogger
+      GovernorBackground.run('blogger_post', self)
     end
   end
 end

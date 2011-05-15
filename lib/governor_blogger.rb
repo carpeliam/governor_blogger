@@ -1,4 +1,5 @@
 require 'governor_blogger/rails'
+require 'governor_blogger/blogger'
 require 'governor_blogger/instance_methods'
 
 blogger = Governor::Plugin.new('blogger')
@@ -11,6 +12,17 @@ blogger.register_model_callback do |base|
 end
 
 Governor::PluginManager.register blogger
+
+GovernorBackground.register('blogger_post') do |article|
+  # article.post_to_blogger
+  blogger = GovernorBlogger::Blogger.new(article)
+  id = if article.blogger_id.blank?
+    blogger.post
+  else
+    blogger.put
+  end
+  article.reload.update_attribute :blogger_id, id
+end
 
 module GovernorBlogger
   class Configuration

@@ -9,7 +9,7 @@ source "http://rubygems.org"
 gem 'gdata'
 gem 'nokogiri'
 gem 'governor'
-gem 'governor_background'
+gem 'governor_background', '>= 0.3.0'
 
 group :development, :test do
   gem 'jeweler', '~> 1.5.2'
@@ -24,5 +24,7 @@ group :development, :test do
   gem 'devise'
   gem 'governor_blogger', :path => './'
   gem 'delayed_job'
+  gem 'resque'
+  gem 'resque-status', :require => 'resque/status'
   gem 'dynamic_form'
 end

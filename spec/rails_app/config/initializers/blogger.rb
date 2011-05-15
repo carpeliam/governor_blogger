@@ -1,3 +1,3 @@
-GovernorBlogger.config.username = ''
-GovernorBlogger.config.password = ''
-GovernorBlogger.config.blog_id  = ''
+GovernorBlogger.config.username = 'user'
+GovernorBlogger.config.password = 'pass'
+GovernorBlogger.config.blog_id  = '1234567890123456789'

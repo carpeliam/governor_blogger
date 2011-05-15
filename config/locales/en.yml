@@ -1,5 +1,5 @@
 en:
   governor_background:
-    post_to_blogger_completed: '"%{resource}" was completed successfully.'
-    post_to_blogger_failed: '"%{resource}" could not be created: %{message}.'
-    post_to_blogger_killed: '"%{resource}" was interrupted: %{message}.'
+    blogger_post_completed: 'Your article was successfully posted to Blogger.'
+    blogger_post_failed: 'Unable to post to Blogger: %{message}.'
+    blogger_post_killed: 'Your post to Blogger was interrupted: %{message}.'
